@@ -313,9 +313,11 @@ packages:
   movies_modul:
     dependency: "direct main"
     description:
-      path: "../movies_modul"
-      relative: true
-    source: path
+      path: "."
+      ref: HEAD
+      resolved-ref: b678accfc05b516d9e9b801d61ff7a904d9a1417
+      url: "https://github.com/bakarvin/movies_modul.git"
+    source: git
     version: "0.0.1"
   nested:
     dependency: transitive
@@ -439,9 +441,11 @@ packages:
   shared_modul:
     dependency: "direct main"
     description:
-      path: "../shared_modul"
-      relative: true
-    source: path
+      path: "."
+      ref: HEAD
+      resolved-ref: e1ff75459a07137a81b8b008adbf647e1afb38ad
+      url: "https://github.com/bakarvin/shared_modul.git"
+    source: git
     version: "0.0.1"
   sky_engine:
     dependency: transitive
@@ -490,13 +494,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.1.1"
-  super_banners:
-    dependency: transitive
-    description:
-      name: super_banners
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.0.1"
   synchronized:
     dependency: transitive
     description:
@@ -521,9 +518,11 @@ packages:
   tv_modul:
     dependency: "direct main"
     description:
-      path: "../tv_modul"
-      relative: true
-    source: path
+      path: "."
+      ref: HEAD
+      resolved-ref: "0c36e284370c206a46cf92bc77e1fe3ef8562421"
+      url: "https://github.com/bakarvin/tv_modul.git"
+    source: git
     version: "0.0.1"
   typed_data:
     dependency: transitive

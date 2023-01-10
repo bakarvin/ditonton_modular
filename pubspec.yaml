@@ -39,19 +39,19 @@ dependencies:
   google_sign_in: ^5.4.2
 
   shared_modul:
-    path: ../shared_modul
-#    git:
-#      url: https://github.com/bakarvin/shared_modul.git
+    # path: ../shared_modul
+    git:
+      url: https://github.com/bakarvin/shared_modul.git
 
   movies_modul:
-    path: ../movies_modul
-#    git:
-#      url: https://github.com/bakarvin/movies_modul.git
+    # path: ../movies_modul
+    git:
+      url: https://github.com/bakarvin/movies_modul.git
 
   tv_modul:
-    path: ../tv_modul
-#    git:
-#      url: https://github.com/bakarvin/tv_modul.git
+    # path: ../tv_modul
+    git:
+      url: https://github.com/bakarvin/tv_modul.git
 
 dev_dependencies:
   flutter_test:
