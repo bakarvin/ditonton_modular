@@ -443,7 +443,7 @@ packages:
     description:
       path: "."
       ref: HEAD
-      resolved-ref: e1ff75459a07137a81b8b008adbf647e1afb38ad
+      resolved-ref: "120f461b17c8ba8271a793a5114d57e66b608a13"
       url: "https://github.com/bakarvin/shared_modul.git"
     source: git
     version: "0.0.1"
@@ -494,6 +494,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.1.1"
+  super_banners:
+    dependency: transitive
+    description:
+      name: super_banners
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.0.1"
   synchronized:
     dependency: transitive
     description:
@@ -520,7 +527,7 @@ packages:
     description:
       path: "."
       ref: HEAD
-      resolved-ref: "0c36e284370c206a46cf92bc77e1fe3ef8562421"
+      resolved-ref: f9dc58e7a2366445b8ce8635385a546843a5cbb2
       url: "https://github.com/bakarvin/tv_modul.git"
     source: git
     version: "0.0.1"
