@@ -10,15 +10,39 @@ class WatchlistPage extends StatefulWidget {
   State<WatchlistPage> createState() => _WatchlistPageState();
 }
 
-class _WatchlistPageState extends State<WatchlistPage> {
+class _WatchlistPageState extends State<WatchlistPage> with RouteAware {
   @override
   void initState() {
-    MovieWatchlistBloc movieWatchlistBloc = BlocProvider.of<MovieWatchlistBloc>(context);
-    movieWatchlistBloc.add(FetchWatchlistMovies());
-    TvWatchlistBloc tvWatchlistBloc = BlocProvider.of<TvWatchlistBloc>(context);
-    tvWatchlistBloc.add(FetchWatchlistTv());
+    MovieWatchlistBloc movieWatchlistBloc =
+        BlocProvider.of<MovieWatchlistBloc>(context)
+          ..add(FetchWatchlistMovies());
+    TvWatchlistBloc tvWatchlistBloc = BlocProvider.of<TvWatchlistBloc>(context)
+      ..add(FetchWatchlistTv());
     super.initState();
   }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    routeObserver.subscribe(this, ModalRoute.of(context) as PageRoute);
+  }
+
+  @override
+  void didPopNext() {
+    MovieWatchlistBloc movieWatchlistBloc =
+        BlocProvider.of<MovieWatchlistBloc>(context)
+          ..add(FetchWatchlistMovies());
+    TvWatchlistBloc tvWatchlistBloc = BlocProvider.of<TvWatchlistBloc>(context)
+      ..add(FetchWatchlistTv());
+    super.didPopNext();
+  }
+
+  @override
+  void dispose() {
+    routeObserver.unsubscribe(this);
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -39,17 +63,12 @@ class _WatchlistPageState extends State<WatchlistPage> {
                     text: ("Tv Series"),
                   ),
                 ],
-              )
-          ),
+              )),
         ),
         body: const Padding(
           padding: EdgeInsets.all(8.0),
           child: TabBarView(
-              children: <Widget>[
-                MovieWatchlistPage(),
-                TvWatchListPage()
-              ]
-          ),
+              children: <Widget>[MovieWatchlistPage(), TvWatchListPage()]),
         ),
       ),
     );
