@@ -315,7 +315,7 @@ packages:
     description:
       path: "."
       ref: HEAD
-      resolved-ref: "5208d4749c5e657284b2ba74c80b2017a3a3a0f0"
+      resolved-ref: c6228670200aed33f25d5bb0b7e34c227488ab4e
       url: "https://github.com/bakarvin/movies_modul.git"
     source: git
     version: "0.0.1"
