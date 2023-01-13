@@ -147,7 +147,7 @@ packages:
       name: firebase_crashlytics
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "3.0.9"
+    version: "3.0.10"
   firebase_crashlytics_platform_interface:
     dependency: transitive
     description:
@@ -225,7 +225,7 @@ packages:
       name: google_sign_in
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "5.4.2"
+    version: "5.4.3"
   google_sign_in_android:
     dependency: transitive
     description:
@@ -253,7 +253,7 @@ packages:
       name: google_sign_in_web
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.10.2"
+    version: "0.10.2+1"
   hive:
     dependency: transitive
     description:
@@ -315,7 +315,7 @@ packages:
     description:
       path: "."
       ref: HEAD
-      resolved-ref: b678accfc05b516d9e9b801d61ff7a904d9a1417
+      resolved-ref: "5208d4749c5e657284b2ba74c80b2017a3a3a0f0"
       url: "https://github.com/bakarvin/movies_modul.git"
     source: git
     version: "0.0.1"
@@ -443,7 +443,7 @@ packages:
     description:
       path: "."
       ref: HEAD
-      resolved-ref: "120f461b17c8ba8271a793a5114d57e66b608a13"
+      resolved-ref: f9826c028928ea3ba4c41182f848282bb7ef6d03
       url: "https://github.com/bakarvin/shared_modul.git"
     source: git
     version: "0.0.1"
@@ -465,14 +465,14 @@ packages:
       name: sqflite
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.2.2"
+    version: "2.2.3"
   sqflite_common:
     dependency: transitive
     description:
       name: sqflite_common
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.4.0+2"
+    version: "2.4.1"
   stack_trace:
     dependency: transitive
     description:
@@ -507,7 +507,7 @@ packages:
       name: synchronized
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "3.0.0+3"
+    version: "3.0.1"
   term_glyph:
     dependency: transitive
     description:
@@ -527,7 +527,7 @@ packages:
     description:
       path: "."
       ref: HEAD
-      resolved-ref: f9dc58e7a2366445b8ce8635385a546843a5cbb2
+      resolved-ref: b1b3ae788531e6e5c9482a10aa9fe6346dbe6b28
       url: "https://github.com/bakarvin/tv_modul.git"
     source: git
     version: "0.0.1"
@@ -565,7 +565,7 @@ packages:
       name: xdg_directories
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.2.0+2"
+    version: "0.2.0+3"
 sdks:
   dart: ">=2.18.4 <3.0.0"
   flutter: ">=3.3.0"

@@ -6,7 +6,8 @@ final locator = GetIt.instance;
 
 Future<void> init(String baseUrl) async {
   //Movies bloc
-  locator.registerFactory(() => MovieDetailBloc(locator(), locator(), locator()));
+  locator
+      .registerFactory(() => MovieDetailBloc(locator(), locator(), locator()));
   locator.registerFactory(() => MoviePlayingBloc(locator()));
   locator.registerFactory(() => MoviePopularBloc(locator()));
   locator.registerFactory(() => MovieTopratedBloc(locator()));
@@ -45,33 +46,25 @@ Future<void> init(String baseUrl) async {
   locator.registerLazySingleton(() => SaveWatchlistTv(locator()));
   locator.registerLazySingleton(() => SearchTvSeries(locator()));
 
-
   //Movies Repository
-  locator.registerLazySingleton<MovieRepository>(
-    () => MovieRepositoryImpl(
-        remoteDataSource: locator(),
-        localDataSource: locator()
-    )
-  );
+  locator.registerLazySingleton<MovieRepository>(() => MovieRepositoryImpl(
+      remoteDataSource: locator(), localDataSource: locator()));
   //Tv Repository
-  locator.registerLazySingleton<TvRepository>(
-    () => TvRepositoryImpl(
-          remoteDataSource: locator(),
-          localDataSource: locator()
-      )
-  );
+  locator.registerLazySingleton<TvRepository>(() => TvRepositoryImpl(
+      remoteDataSource: locator(), localDataSource: locator()));
 
   //helper
   locator.registerLazySingleton<DatabaseHelper>(() => DatabaseHelper());
+  locator.registerLazySingleton<SSLHelper>(() => SSLHelper());
 
   //Movies Datasource
   locator.registerLazySingleton<MovieRemoteDataSource>(
-          () => MovieRemoteDataSourceImpl());
+      () => MovieRemoteDataSourceImpl(sslHelper: locator()));
   locator.registerLazySingleton<MovieLocalDataSource>(
-          () => MovieLocalDataSourceImpl(databaseHelper: locator()));
+      () => MovieLocalDataSourceImpl(databaseHelper: locator()));
   //Tv Datasource
   locator.registerLazySingleton<TvRemoteDataSource>(
-          () => TvRemoteDataSourceImpl());
+      () => TvRemoteDataSourceImpl(sslHelper: locator()));
   locator.registerLazySingleton<TvLocalDataSource>(
-          () => TvLocalDataSourceImpl(databaseHelper: locator()));
+      () => TvLocalDataSourceImpl(databaseHelper: locator()));
 }
